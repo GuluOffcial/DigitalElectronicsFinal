@@ -47,7 +47,7 @@ int stepLength = 0;
 //using steplength to program sequences, tempo
 void sequence() {
   stepLength = analogRead(A18); //making the tempo speed the third pot
-  stepLength=map(stepLength,0,1023,150,1000); //define sequence length being in the length of calculated bpm
+  stepLength=map(stepLength,0,1023,150,1001); //define sequence length being in the length of calculated bpm
   Serial.println(stepLength);
   if (millis() > lastStepTime + stepLength) {
     //need to add one more signal send for channel 4(done)
